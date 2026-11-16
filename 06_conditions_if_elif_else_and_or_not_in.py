@@ -1,121 +1,46 @@
 """
-Lesson 6 — Conditions
+Lesson 6 — if, elif, else, and, or, not, in
 
-if / elif / else choose one path.
-and / or / not combine comparisons.
-in checks whether a value is inside a collection or a string.
-
-Run:
-    py -3 06_conditions_if_elif_else_and_or_not_in.py
+if / elif / else pick one path. The first true path wins.
+and, or, and not combine questions. in asks if a value is inside something.
+Run: py -3 06_conditions_if_elif_else_and_or_not_in.py
 """
+#By moahmed Farghali
 
-print("=" * 56)
-print("1. if")
-print("=" * 56)
-
-temperature = 31
-if temperature >= 30:
-    print(temperature, "C is hot")
-
-print()
-print("=" * 56)
-print("2. if / else — one of two paths")
-print("=" * 56)
-
-score = 58
-if score >= 60:
-    print(score, "-> pass")
+actual = "Login"
+expected = "Welcome"
+if actual == expected:
+    check = "pass"
 else:
-    print(score, "-> fail")
+    check = "fail"
 
-print()
-print("=" * 56)
-print("3. if / elif / else — first true branch wins")
-print("=" * 56)
-
-for points in (95, 82, 74, 61, 40):
-    if points >= 90:
-        grade = "A"
-    elif points >= 80:
-        grade = "B"
-    elif points >= 70:
-        grade = "C"
-    elif points >= 60:
-        grade = "D"
+levels = []
+for defects in (0, 2, 8):
+    if defects == 0:
+        level = "green"
+    elif defects <= 3:
+        level = "yellow"
     else:
-        grade = "F"
-    print(points, "->", grade)
+        level = "red"
+    levels.append(level)
 
-print()
-print("=" * 56)
-print("4. and — both sides must be true")
-print("=" * 56)
+logged_in = True
+on_checkout_page = False
+can_pay = logged_in and on_checkout_page
 
-age = 20
-has_ticket = True
-if age >= 18 and has_ticket:
-    print("Welcome in")
-else:
-    print("Cannot enter")
+browser = "firefox"
+supported = browser == "chrome" or browser == "firefox"
 
-has_ticket = False
-if age >= 18 and has_ticket:
-    print("Welcome in")
-else:
-    print("Need a ticket, even if you are old enough")
+button_visible = False
+must_wait = not button_visible
 
-print()
-print("=" * 56)
-print("5. or — at least one side must be true")
-print("=" * 56)
-
-is_weekend = False
-is_holiday = True
-if is_weekend or is_holiday:
-    print("No class today")
-else:
-    print("Class today")
-
-print()
-print("=" * 56)
-print("6. not — flips True and False")
-print("=" * 56)
-
-is_logged_in = False
-if not is_logged_in:
-    print("Please log in")
-
-print("not True ->", not True)
-print("not False ->", not False)
-
-print()
-print("=" * 56)
-print("7. in / not in — membership")
-print("=" * 56)
-
-colors = ["red", "green", "blue"]
-print("'green' in colors ->", "green" in colors)
-print("'pink' not in colors ->", "pink" not in colors)
-print("'Py' in 'Python' ->", "Py" in "Python")
-print("'age' in student dict ->", "age" in {"name": "Sam", "age": 16})
-
-print()
-print("=" * 56)
-print("8. Combining them")
-print("=" * 56)
-
-role = "editor"
 allowed = ["admin", "editor"]
-active = True
+role = "editor"
+role_allowed = role in allowed
 
-if active and role in allowed:
-    print(role, "may edit")
-elif not active:
-    print("Account is inactive")
-else:
-    print(role, "may only read")
+environment = "staging"
+run_admin_test = environment == "staging" and role in allowed
 
-# and is checked before or, unless you add parentheses.
-# True or False and False  ==  True or (False and False)  ==  True
-print("True or False and False ->", True or False and False)
-print("(True or False) and False ->", (True or False) and False)
+print(check)
+print(levels)
+print(can_pay, supported, must_wait, role_allowed, run_admin_test)

@@ -1,77 +1,37 @@
 """
 Lesson 10 — enumerate, and looping a dict
 
-enumerate pairs each item with its position: (index, item).
-A dict can be looped by keys, by values, or by key and value together.
-
-Run:
-    py -3 10_enumerate_and_looping_a_dict.py
+enumerate pairs each item with its position.
+A dict loop can give the field name, the value, or both.
+Run: py -3 10_enumerate_and_looping_a_dict.py
 """
+#By moahmed Farghali
 
-print("=" * 56)
-print("1. enumerate — index and item")
-print("=" * 56)
+steps = ["open page", "type email", "click Send"]
 
-tasks = ["open file", "read lines", "close file"]
-for index, task in enumerate(tasks):
-    print(index, task)
+numbered_from_zero = []
+for index, step in enumerate(steps):
+    numbered_from_zero.append((index, step))
 
-print()
-print("=" * 56)
-print("2. Start counting at 1")
-print("=" * 56)
+numbered_from_one = []
+for number, step in enumerate(steps, start=1):
+    numbered_from_one.append((number, step))
 
-for number, task in enumerate(tasks, start=1):
-    print(f"{number}. {task}")
-
-print()
-print("=" * 56)
-print("3. A dict loop gives the keys")
-print("=" * 56)
-
-book = {
-    "title": "Python Basics",
-    "pages": 120,
-    "language": "English",
+test_data = {
+    "username": "amina",
+    "password": "Secret123",
+    "expected": "Welcome",
 }
+fields = []
+for field, value in test_data.items():
+    fields.append((field, value))
 
-for key in book:
-    print(key, "->", book[key])
+case_names = ["login", "search", "logout"]
+durations = {}
+for name in case_names:
+    durations[name] = len(name)
 
-print()
-print("=" * 56)
-print("4. .items() — key and value together")
-print("=" * 56)
-
-for key, value in book.items():
-    print(f"{key}: {value}")
-
-print()
-print("=" * 56)
-print("5. .keys() and .values()")
-print("=" * 56)
-
-print("keys:", list(book.keys()))
-print("values:", list(book.values()))
-
-for value in book.values():
-    print("value:", value)
-
-print()
-print("=" * 56)
-print("6. enumerate the pairs when you also want a position")
-print("=" * 56)
-
-for index, (key, value) in enumerate(book.items(), start=1):
-    print(f"{index}. {key} = {value}")
-
-print()
-print("=" * 56)
-print("7. Build a dict while looping")
-print("=" * 56)
-
-names = ["Amina", "Sam", "Lee"]
-name_lengths = {}
-for name in names:
-    name_lengths[name] = len(name)
-print(name_lengths)
+print(numbered_from_zero)
+print(numbered_from_one)
+print(fields)
+print(durations)
