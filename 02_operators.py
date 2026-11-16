@@ -10,6 +10,7 @@ inside conditions.
 Run:
     py -3 02_operators.py
 """
+#By moahmed Farghali
 
 print("=" * 56)
 print("1. Arithmetic")
