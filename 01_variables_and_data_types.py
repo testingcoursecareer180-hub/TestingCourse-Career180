@@ -7,6 +7,7 @@ type from the value you store (this is called dynamic typing).
 Run:
     py -3 01_variables_and_data_types.py
 """
+#By moahmed Farghali
 
 print("=" * 56)
 print("1. Creating variables")
