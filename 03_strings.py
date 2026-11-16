@@ -7,6 +7,7 @@ immutable: methods return a new string, they do not edit the old one.
 Run:
     py -3 03_strings.py
 """
+#By moahmed Farghali
 
 print("=" * 56)
 print("1. Creating strings")
