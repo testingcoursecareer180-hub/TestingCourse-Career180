@@ -9,6 +9,7 @@ Run: py -3 04_collections_list_tuple_dict_set.py
 """
 #By moahmed Farghali
 
+# List :
 steps = ["open login page", "type username", "click Login"]
 steps.append("check welcome message")
 first_step = steps[0]
