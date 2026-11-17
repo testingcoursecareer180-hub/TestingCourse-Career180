@@ -7,7 +7,7 @@ Run: py -3 01_variables_and_data_types.py
 #By moahmed Farghali
 
 # A name stores one value. The type comes from that value.
-username = "amina"          # str, text
+username = "Mohamed"          # str, text
 expected_price = 19.99      # float, decimal
 item_count = 3              # int, whole number
 test_passed = True          # bool, True or False
