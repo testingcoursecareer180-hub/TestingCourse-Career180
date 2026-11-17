@@ -21,7 +21,7 @@ price_as_number = float(price_on_screen)
 actual_price = 19.99
 actual_price = 20.50
 
-tester_name = "Radwa"
+tester_name = "Farghali"
 MAX_RETRIES = 3  # ALL_CAPS marks a value you plan to keep unchanged
 
 print(username, expected_price, item_count, test_passed, error_message)
