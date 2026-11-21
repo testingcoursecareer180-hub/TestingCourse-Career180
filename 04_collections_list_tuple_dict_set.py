@@ -9,17 +9,17 @@ Run: py -3 04_collections_list_tuple_dict_set.py
 """
 #By moahmed Farghali
 
-# List :
+# List Format: name = [item1, item2, item3] (square brackets).
 steps = ["open login page", "type username", "click Login"]
 steps.append("check welcome message")
 first_step = steps[0]
 step_count = len(steps)
 
-# A tuple is unpacked into separate names. You read it; you do not replace its items.
+#Tuple : Form: name = (item1, item2) (round brackets). 
 screen_size = (1920, 1080)
 width, height = screen_size
 
-# A missing dict key can return a backup value through .get.
+#Dictionary : Form: name = {"key": value} (curly brackets, a colon between key and value).
 test_data = {
     "username": "amina",
     "password": "Secret123",
@@ -27,12 +27,3 @@ test_data = {
 }
 test_data["browser"] = "chrome"
 role = test_data.get("role", "not set")
-
-# The second "chrome" is dropped. A set does not promise an order.
-browsers = {"chrome", "firefox", "chrome"}
-browsers.add("edge")
-
-print(steps, first_step, step_count)
-print(width, height)
-print(test_data["username"], test_data["browser"], role)
-print(browsers)
