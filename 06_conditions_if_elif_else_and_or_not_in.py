@@ -5,7 +5,6 @@ if / elif / else pick one path. The first true path wins.
 and, or, and not combine questions. in asks if a value is inside something.
 Run: py -3 06_conditions_if_elif_else_and_or_not_in.py
 """
-#By moahmed Farghali
 
 actual = "Login"
 expected = "Welcome"

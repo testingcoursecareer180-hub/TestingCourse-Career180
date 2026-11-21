@@ -5,7 +5,6 @@ Symbols that calculate or compare values.
 and / or / not / in are in lesson 6.
 Run: py -3 02_operators.py
 """
-#By moahmed Farghali
 
 price = 20
 quantity = 3

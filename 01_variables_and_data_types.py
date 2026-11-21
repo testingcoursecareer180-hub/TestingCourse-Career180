@@ -4,7 +4,6 @@ Lesson 1 — Variables and data types
 A variable is a name for a piece of data.
 Run: py -3 01_variables_and_data_types.py
 """
-#By moahmed Farghali
 
 # A name stores one value. The type comes from that value.
 username = "Mohamed"          # str, text

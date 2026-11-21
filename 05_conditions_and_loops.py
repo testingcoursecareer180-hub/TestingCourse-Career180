@@ -4,7 +4,6 @@ Lesson 5 — Conditions and loops together
 The loop visits each item. The if decides what that item means.
 Run: py -3 05_conditions_and_loops.py
 """
-#By moahmed Farghali
 
 actual_titles = ["Welcome", "Login", "Welcome", "Error"]
 expected_title = "Welcome"

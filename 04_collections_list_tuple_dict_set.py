@@ -5,32 +5,41 @@ list  : ordered, and you can change it
 tuple : ordered, and it stays fixed
 dict  : look up a value by a name
 set   : each value is stored once
-Run: py -3 04_collections_list_tuple_dict_set.py
 """
 #By moahmed Farghali
 
-# List Format: name = [item1, item2, item3] (square brackets).
-steps = ["open login page", "type username", "click Login"]
-steps.append("check welcome message")
-first_step = steps[0]
-step_count = len(steps)
+my_list  = ["a", "b", "a"]          # list: ['a', 'b', 'a']   (التكرار مسموح)
+my_tuple = ("a", "b", "a")          # tuple: نفس الشيء لكن ثابت ,لا يتم اضافة او حذف او تعديل
+my_dict  = {"first": "a", "second": "b"}   # dict: أصل للقيمة بالاسم
+my_set   = {"a", "b", "a"}          # set: {'a', 'b'}  (التكرار اختفى)
 
-#Tuple : Form: name = (item1, item2) (round brackets). 
-screen_size = (1920, 1080)
-width, height = screen_size
+print(my_list[0])        # a      الوصول بالرقم
+print(my_dict["second"]) # b      الوصول بالاسم
+print(my_set)            # {'a', 'b'}   لا ترتيب مضمون
 
-#Dictionary : Form: name = {"key": value} (curly brackets, a colon between key and value).
-test_data = {
-    "username": "amina",
-    "password": "Secret123",
-    "expected": "Welcome",
-}
-test_data["browser"] = "chrome"
-role = test_data.get("role", "not set")
-print(test_data["username"], test_data["browser"], role)
+my_list[0] = "z"         # ✅ يعمل
+# my_tuple[0] = "z"      # ❌ خطأ TypeError لأن tuple ثابت
+# my_set[0]              # ❌ خطأ لأن set ليس له index
+
+#Tuple to List and List to Tuple
+viewport = (1920, 1080)
+temp = list(viewport)    # [1920, 1080]
+temp.append(500)         # الآن يمكن الإضافة
+viewport = tuple(temp)   # (1920, 1080, 500)
 
 
-#Set : Form: name = {item1, item2} (curly brackets).
-browsers = {"chrome", "firefox", "chrome"}
-browsers.add("edge")
-print(browsers)
+# list: append تضيف في آخر القائمة
+browsers = ["chrome", "firefox"]
+browsers.append("edge")
+print(browsers)        # ['chrome', 'firefox', 'edge']
+
+# set: add تضيف قيمة، وإذا كانت موجودة لا يحدث شيء
+statuses = {"passed", "failed"}
+statuses.add("skipped")
+statuses.add("passed")  # موجودة أصلاً، لا تتكرر
+print(statuses)        # {'passed', 'failed', 'skipped'} (الترتيب قد يختلف)
+
+# dict: تضيف بتحديد المفتاح
+user = {"name": "Mona"}
+user["role"] = "admin"
+print(user)            # {'name': 'Mona', 'role': 'admin'}

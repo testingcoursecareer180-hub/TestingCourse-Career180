@@ -4,7 +4,6 @@ Lesson 3 — Strings
 Text from a page is a string. Methods return a new string.
 Run: py -3 03_strings.py
 """
-#By moahmed Farghali
 
 page_title = "Login"
 message = "It's the wrong password"

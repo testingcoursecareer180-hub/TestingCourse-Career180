@@ -5,7 +5,6 @@ for repeats once for each item, or each number in a range.
 while repeats while a condition stays true. Change something inside it, or it never stops.
 Run: py -3 07_types_of_loops.py
 """
-#By moahmed Farghali
 
 browsers_run = []
 for browser in ["chrome", "firefox", "edge"]:
