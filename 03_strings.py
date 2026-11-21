@@ -9,8 +9,8 @@ page_title = "Login"
 message = "It's the wrong password"
 full_name = "Amina" + " " + "Hassan"
 
-user = "Sam"
-attempts = 2
+user = "Ahmed"
+attempts = 100
 report_line = f"{user} failed the login {attempts} time(s)"
 
 # Counting starts at 0. The end index is not included.

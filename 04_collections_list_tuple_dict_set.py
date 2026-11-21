@@ -42,4 +42,5 @@ print(statuses)        # {'passed', 'failed', 'skipped'} (الترتيب قد ي
 # dict: تضيف بتحديد المفتاح
 user = {"name": "Mona"}
 user["role"] = "admin"
+user["name"] = "Mohamed"
 print(user)            # {'name': 'Mona', 'role': 'admin'}
