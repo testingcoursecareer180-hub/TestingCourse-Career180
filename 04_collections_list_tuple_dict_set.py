@@ -27,3 +27,10 @@ test_data = {
 }
 test_data["browser"] = "chrome"
 role = test_data.get("role", "not set")
+print(test_data["username"], test_data["browser"], role)
+
+
+#Set : Form: name = {item1, item2} (curly brackets).
+browsers = {"chrome", "firefox", "chrome"}
+browsers.add("edge")
+print(browsers)
